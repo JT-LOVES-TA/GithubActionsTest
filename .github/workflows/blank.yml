@@ -41,4 +41,4 @@ jobs:
       - name: Check protoc version
         run: protoc --version
       - name: generate js proto
-        run: protoc -I=. src/proto/marketspace/marketspace.proto \ --js_out=import_style=commonjs,binary:. \ --grpc-web_out=import_style=typescript,mode=grpcweb:.
+        run: protoc -I=. proto/example.proto \ --js_out=import_style=commonjs,binary:. \ --grpc-web_out=import_style=typescript,mode=grpcweb:.
