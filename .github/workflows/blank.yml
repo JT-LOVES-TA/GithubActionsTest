@@ -45,4 +45,4 @@ jobs:
       - name: generate js proto
         run: protoc -I=. ./proto/example.proto \
              --js_out=import_style=commonjs,binary:./proto \
-             --grpc-web_out=import_style=typescript,mode=grpcweb:.
+             --grpc-web_out=import_style=typescript,mode=grpcweb:./proto
