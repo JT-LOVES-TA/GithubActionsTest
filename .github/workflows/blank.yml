@@ -43,4 +43,6 @@ jobs:
       - name: Check protoc version
         run: pwd
       - name: generate js proto
-        run: protoc -I=. proto/example.proto \ --js_out=import_style=commonjs,binary:. \ --grpc-web_out=import_style=typescript,mode=grpcweb:.
+        run: protoc -I=. proto/example.proto \
+             --js_out=import_style=commonjs,binary:. \
+             --grpc-web_out=import_style=typescript,mode=grpcweb:.
