@@ -47,6 +47,6 @@ jobs:
       - name: install grpc web
         run: npm i grpc-web
       - name: generate js proto
-        run: protoc -I=. ./proto/example.proto \
-             --js_out=import_style=commonjs,binary:./proto \
-             --grpc-web_out=import_style=typescript,mode=grpcweb:./proto
+        run: protoc -I=. ../../proto/example.proto \
+            --js_out=import_style=commonjs,binary:../../proto \
+            --grpc-web_out=import_style=typescript,mode=grpcweb:../../proto
