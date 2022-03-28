@@ -46,7 +46,9 @@ jobs:
         uses: actions/setup-node@v3.0.0
       - name: install grpc web
         run: npm i grpc-web
+      - name: show proto
+        run: ls ./proto
       - name: generate js proto
-        run: protoc -I=. proto/test.proto \
-            --js_out=import_style=commonjs,binary:. \
-            --grpc-web_out=import_style=typescript,mode=grpcweb:.
+        run: protoc -I=./proto \
+            --js_out=import_style=commonjs,binary:./proto \
+            --grpc-web_out=import_style=typescript,mode=grpcweb:./proto
